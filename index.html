@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revou Mini Project (Kalkulator)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Katik</h1> <span class="subheader">Kalkulator Matematik</span>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="title">
+                <h2>Welcome to Katik</h2>
+                <p class="subtitle no-margin">Hai Sobat, Selamat datang di Katik :|</p>
+                <p class="des no-margin">Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan
+                    keliling bangun datar</p>
+            </div>
+
+            <div class="btn-group">
+                <input type="radio" name="select" id="option-1" onclick="handleClick(this)" value="square" checked>
+                <input type="radio" name="select" id="option-2" onclick="handleClick(this)" value="rectangle">
+                <label for="option-1" class="option option-1">
+                    <div class="dot"></div>
+                    <span>Persegi</span>
+                </label>
+                <label for="option-2" class="option option-2">
+                    <div class="dot"></div>
+                    <span>Persegi Panjang</span>
+                </label>
+            </div>
+
+            <!-- persegi -->
+            <div class="card" id="square">
+                <div class="card-header">
+                    <h3>Luas dan Keliling Persegi</h3>
+                </div>
+                <div class="card-body">
+                    <div class="square-red"></div>
+                    <p class="text-center"><strong>Bujur Sangkar</strong></p>
+
+                    <div class="func-desc">
+                        <p>Rumus Luas dan Keliling Persegi yaitu :</p>
+                        <p class="text-center"><strong>L = S x S</strong></p>
+                        <p class="text-center"><strong>K = 4 x S</strong></p>
+                        <p class="no-margin">Dimana :</p>
+                        <p class="no-margin">L = Luas</p>
+                        <p class="no-margin">K = Keliling</p>
+                        <p class="no-margin">S = Sisi</p>
+                    </div>
+
+                    <div class="func">
+                        <h2 class="text-center">Hitung Luas dan Keliling Persegi</h2>
+                        <input class="w-100" type="number" id="sisi" name="sisi" placeholder="Nilai Sisi"
+                            oninput="handleOnInput()" required>
+                        <button class="btn-calculate" onclick="calculateSquare()">Hitung</button>
+                        <div class="result">
+                            <div id="resultLuasPersegi"></div>
+                            <div id="resultKelilingPersegi"></div>
+                        </div>
+                        <button class="btn-reset" onclick="resetPersegi()">Reset</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- persegi panjang -->
+            <div class="card" id="rectangle">
+                <div class="card-header">
+                    <h3>Luas dan Keliling Persegi Panjang</h3>
+                </div>
+                <div class="card-body">
+                    <div class="rect-red"></div>
+                    <p class="text-center"><strong>Persegi Panjang</strong></p>
+
+                    <div class="func-desc">
+                        <p>Rumus Luas dan Keliling Persegi Panjang yaitu :</p>
+                        <p class="text-center"><strong>L = p x l</strong></p>
+                        <p class="text-center"><strong>K = 2(p + l)</strong></p>
+                        <p class="no-margin">Dimana :</p>
+                        <p class="no-margin">L = Luas</p>
+                        <p class="no-margin">K = Keliling</p>
+                        <p class="no-margin">p = Panjang</p>
+                        <p class="no-margin">l = Lebar</p>
+                    </div>
+
+                    <div class="func">
+                        <h2 class="text-center">Hitung Luas dan Keliling Persegi Panjang</h2>
+                        <div style="display: flex; gap: 12px">
+                            <input class="w-100" type="number" id="panjang" name="sisi" placeholder="Nilai Panjang"
+                                oninput="handleOnInput()" required>
+                            <input class="w-100" type="number" id="lebar" name="sisi" placeholder="Nilai Lebar"
+                                oninput="handleOnInput()" required>
+                        </div>
+                        <button class="btn-calculate" onclick="calculateRect()">Hitung</button>
+                        <div class="result">
+                            <div id="resultLuasPersegiPanjang"></div>
+                            <div id="resultKelilingPersegiPanjang"></div>
+                        </div>
+                        <button class="btn-reset" onclick="resetPersegiPanjang()">Reset</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        Mini Project KalTik &copy; 2023
+        by Triyoga Dibrata
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
