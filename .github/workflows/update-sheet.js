@@ -26,7 +26,7 @@ async function updateSheet(testCasesPassed) {
     "Repository URL": `https://github.com/${process.env.GITHUB_REPOSITORY}`,
     // 'Successful Test Cases': parseInt(process.env.TEST_CASES_PASSED),
     "Successful Test Cases": process.env.TEST_CASES_PASSED,
-    "Deployment address": `https://${process.env.GITHUB_ACTOR}.github.io/15-may-23-${process.env.GITHUB_ACTOR}`,
+    "Deployment address": `https://${process.env.GITHUB_ACTOR}.github.io`,
     Date: dateFormatted,
     Time: timeFormatted,
   });
