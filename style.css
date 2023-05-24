@@ -50,6 +50,10 @@ header {
   input[type="radio"]{
     display: none;
   }
+  .option-1, .option-2 {
+    border: 1px solid #3379b7;
+  }
+  
   #option-1:checked:checked ~ .option-1,
   #option-2:checked:checked ~ .option-2{
     border-color: #3379b7;
